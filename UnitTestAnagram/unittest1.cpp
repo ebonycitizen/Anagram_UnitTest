@@ -8,10 +8,13 @@ TEST_CLASS(UnitTest1)
 {
 public:
 
-	TEST_METHOD(TestMethod1)
+	TEST_METHOD(TestMethodTrue)
 	{
-		// TODO: テスト コードをここに挿入します
-
 		Assert::AreEqual(Anagram::CheckWord("abc", "bac"), true);
+	}
+	
+	TEST_METHOD(TestMethodFalse)
+	{
+		Assert::AreEqual(Anagram::CheckWord("abc", "aab"), false);
 	}
 };
